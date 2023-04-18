@@ -1,0 +1,11 @@
+Step by step
+
+1. Create a new laravel app ->
+        composer create-project laravel/laravel
+
+2. For create all dependencies
+        npm install
+        npm run dev
+
+3. Installing React and writing my first component. We need 2 libraries: react and react-dom
+        npm install --save-dev react react-dom
