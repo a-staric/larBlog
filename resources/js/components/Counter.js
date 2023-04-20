@@ -1,5 +1,6 @@
 // resources/js/components/Counter.js
 
+import axios from "axios";
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
@@ -10,12 +11,21 @@ export default function Counter() {
     // Create handleIncrement event handler
     const handleIncrement = () => {
         setCount(prevCount => prevCount + 1)
+        notifyServer();
     };
 
     // Create handleDecrement event handler
     const handleDecrement = () => {
         setCount(prevCount => prevCount - 1);
+        notifyServer();
     };
+
+    // Notifies the server about the change
+    const notifyServer = () => {
+        axios.post('/count', {
+            message: 'Counter Updated!',
+        })
+    }
 
     return(
         <div>
