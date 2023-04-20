@@ -11,5 +11,7 @@ export default function HelloReact() {
 
 if (document.getElementById('hello-react')) {
 
+
+
     ReactDOM.render(<HelloReact />, document.getElementById('hello-react'));
 }
