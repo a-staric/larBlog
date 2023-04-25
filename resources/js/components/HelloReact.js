@@ -1,18 +1,39 @@
 // resources/js/components/HelloReact.js
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+const helloReact = createRoot(document.getElementById('hello-react'));
 
-export default function HelloReact() {
+function HelloReact (){
+
+    function someText(count){
+        const result = [];
+        for(let index = 0; index < count; index++){
+            result.push(
+                <div>
+                    <span className='text-md text-gray-500'>{index}</span>
+                    <br/>
+                </div>
+            );
+        }
+        return result;
+    }
+    function printLog(){
+        console.log('Print');
+    }
+
+
+
     return (
-        <h1>Hello React!</h1>
+        <div>
+            <h1 onClick={printLog}>Hello React!</h1>
+            {someText(150)}
+        </div>
     );
 }
 
-if (document.getElementById('hello-react')) {
-
-
-
-
-    ReactDOM.render(<HelloReact />, document.getElementById('hello-react'));
-}
+helloReact.render(
+    <React.StrictMode>
+        <HelloReact />
+    </React.StrictMode>
+);

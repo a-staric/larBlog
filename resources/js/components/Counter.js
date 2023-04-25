@@ -2,9 +2,10 @@
 
 import axios from "axios";
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from 'react-dom';
 
-export default function Counter() {
+
+function Counter() {
     // Set the initial count state to zero, 0
     const [count, setCount] = useState(0);
 
