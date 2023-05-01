@@ -10,8 +10,8 @@ function HelloReact (){
         const result = [];
         for(let index = 0; index < count; index++){
             result.push(
-                <div>
-                    <span className='text-md text-gray-500'>{index}</span>
+                <div key={index}>
+                    <span className='text-md text-gray-500' >{index}</span>
                     <br/>
                 </div>
             );

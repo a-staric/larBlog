@@ -24,18 +24,11 @@
     </head>
     <body>
 
-        <div id="app">
-            <div id="an-header"></div>
-
-            <div id="hello-react"></div>
-
-            <div id="an-footer"></div>
-        </div>
-
-
+            <div id="root">
+            </div>
 
             <script src="{{ asset('js/manifest.js') }}"></script>
             <script src="{{ asset('js/vendor.js') }}"></script>
-            <script src="{{ asset('js/app.js') }}"></script>
+            <script src="{{ asset('js/index.js') }}"></script>
     </body>
 </html>
